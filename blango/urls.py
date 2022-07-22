@@ -23,3 +23,6 @@ urlpatterns = [
     path('', include('blog.urls')),
     
 ]
+
+#from django.conf import settings
+#print(f"DEBUG: {settings.DEBUG}")
