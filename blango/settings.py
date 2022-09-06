@@ -34,6 +34,12 @@ class Dev(Configuration):
   #ALLOWED_HOSTS = ["*"]
   ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0", ".codio.io"])
 
+  CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+    }
+}
 
   # Application definition
 
