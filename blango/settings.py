@@ -17,6 +17,10 @@ from configurations import values
 import dj_database_url
 
 class Dev(Configuration):
+
+  ACCOUNT_ACTIVATION_DAYS = 7
+
+  EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
   
   AUTH_USER_MODEL = "blango_auth.User"
 
